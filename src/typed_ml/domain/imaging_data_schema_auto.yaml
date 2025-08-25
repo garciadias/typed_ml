@@ -1,0 +1,608 @@
+schema_type: dataframe
+version: 0.26.0
+columns:
+  FileName:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  SpecificCharacterSet:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  SOPClassUID:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  SOPInstanceUID:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  StudyDate:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 20000101.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 20191229.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  SeriesDate:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 20000101.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 20191229.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  ContentDate:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 20241218.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 20241218.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  StudyTime:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 8.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 235954.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  SeriesTime:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 8.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 235954.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  ContentTime:
+    title: null
+    description: null
+    dtype: float64
+    nullable: false
+    checks:
+    - value: 105802.452982
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 105936.630257
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  AccessionNumber:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  Modality:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  ConversionType:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  InstitutionName:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  ReferringPhysicianName:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  StudyDescription:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  InstitutionalDepartmentName:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  ManufacturerModelName:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  PatientName:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  PatientID:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  PatientBirthDate:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 19500103.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 19991231.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  PatientSex:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  OtherPatientIDs:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  PatientAge:
+    title: null
+    description: null
+    dtype: str
+    nullable: false
+    checks:
+      - value: '^[0-1]\d{2}Y$'
+        options:
+          check_name: str_matches
+          raise_warning: false
+    unique: false
+    coerce: false
+    required: true
+    n_fails: 10
+  ProtocolName:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  SeriesInstanceUID:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  InstanceNumber:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 1.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 1.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  SamplesPerPixel:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 1.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 1.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  PhotometricInterpretation:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  PlanarConfiguration:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 1.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 1.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  Rows:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 512.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 512.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  Columns:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 512.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 512.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  BitsAllocated:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 8.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 8.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  BitsStored:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 8.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 8.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  HighBit:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 7.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 7.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  PixelRepresentation:
+    title: null
+    description: null
+    dtype: int64
+    nullable: false
+    checks:
+    - value: 0.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 0.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  path:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  conditioning:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  pathologies:
+    title: null
+    description: null
+    dtype: object
+    nullable: false
+    checks: null
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+  abnormality_flag:
+    title: null
+    description: null
+    dtype: float64
+    nullable: false
+    checks:
+    - value: 0.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 1.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    unique: false
+    coerce: false
+    required: true
+    regex: false
+checks: null
+index:
+- title: null
+  description: null
+  dtype: int64
+  nullable: false
+  checks:
+  - value: 0.0
+    options:
+      check_name: greater_than_or_equal_to
+      raise_warning: false
+      ignore_na: true
+  - value: 8331.0
+    options:
+      check_name: less_than_or_equal_to
+      raise_warning: false
+      ignore_na: true
+  name: null
+  unique: false
+  coerce: false
+dtype: null
+coerce: true
+strict: false
+name: null
+ordered: false
+unique: null
+report_duplicates: all
+unique_column_names: false
+add_missing_columns: false
+title: null
+description: null
