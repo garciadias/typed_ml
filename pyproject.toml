@@ -1,0 +1,30 @@
+[project]
+name = "typed-ml"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+authors = [
+    { name = "R. Garcia-Dias", email = "rafaelagd@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=2.3.2",
+    "pandera[io]>=0.26.0",
+    "pydantic>=2.11.7",
+    "scikit-learn>=1.7.1",
+    "tabulate>=0.9.0",
+]
+
+[project.scripts]
+typed-ml = "typed_ml:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "pandas-stubs>=2.3.0.250703",
+    "scikit-learn[stubs]>=1.7.1",
+]
