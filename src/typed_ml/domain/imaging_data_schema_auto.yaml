@@ -304,17 +304,13 @@ columns:
   PatientAge:
     title: null
     description: null
-    dtype: str
+    dtype: object
     nullable: false
-    checks:
-      - value: '^[0-1]\d{2}Y$'
-        options:
-          check_name: str_matches
-          raise_warning: false
+    checks: null
     unique: false
     coerce: false
     required: true
-    n_fails: 10
+    regex: false
   ProtocolName:
     title: null
     description: null
