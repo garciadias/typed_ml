@@ -309,13 +309,19 @@ columns:
   PatientAge:
     title: null
     description: null
-    dtype: str
+    dtype: "Int64"
     nullable: false
     checks:
-      - value: '^[0-1]\d{2}Y$'
-        options:
-          check_name: str_matches
-          raise_warning: false
+    - value: 0.0
+      options:
+        check_name: greater_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
+    - value: 120.0
+      options:
+        check_name: less_than_or_equal_to
+        raise_warning: false
+        ignore_na: true
     unique: false
     coerce: false
     required: true

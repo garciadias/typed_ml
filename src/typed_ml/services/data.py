@@ -34,9 +34,17 @@ class FileDataReader(DataReaderInterface):
             df["PatientSex"] = df["PatientSex"].str.upper().map({"M": "M", "F": "F"})
         return df.dropna(subset=["PatientSex"])
 
+    def cast_age_column(self, df: DataFrame) -> DataFrame:
+        if "PatientAge" in df.columns:
+            df["PatientAge"] = (
+                df["PatientAge"].str.extract(r"(\d+)").round().astype("Float64")
+            )
+        return df
+
     def read(self, n_rows: Optional[int] = None) -> DataFrame:
         df = self.read_function(self.path, nrows=n_rows)
         # df = self.clean_sex_column(df)
+        # df = self.cast_age_column(df)
         if isinstance(self.schema, str) or isinstance(self.schema, Path):
             with open(self.schema, "r") as file:
                 schema_yaml = file.read()
@@ -45,6 +53,7 @@ class FileDataReader(DataReaderInterface):
             df = self.schema(df)
         if "id" in df.columns:
             df.set_index("id", inplace=True)
+        # AGE_VALIDATOR.validate(df)
         return df
 
 
@@ -119,7 +128,7 @@ class DataService(DataServiceInterface):
 if __name__ == "__main__":
     # Example usage:
     file_path = "data/POSTDOC_FEDERATED_LEARNING/X_RAYS_PLEFF-EDEMA/dataset.csv"
-    schema_path = "src/typed_ml/domain/imaging_data_schema.yaml"
+    schema_path = "src/typed_ml/domain/imaging_data_schema_auto.yaml"
 
     data_reader = FileDataReader(path=file_path, schema=schema_path)
 
@@ -136,7 +145,6 @@ if __name__ == "__main__":
         "PatientSex",
         "PatientAge",
         "pathologies",
-        "conditioning",
     ]
 
     data_service.load()
